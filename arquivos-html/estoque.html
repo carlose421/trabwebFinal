@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Estoque - Health Website</title>
+    <link rel="stylesheet" href="estoque.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestão de Estoque</h1>
+        <p>Controle eficiente do estoque de medicamentos e materiais médicos, com alertas para reposição e validade.</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="about.html">Sobre</a>
+        <a href="service.html">Serviços</a>
+        <a href="contact.html">Contato</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Adicionar Novo Item ao Estoque</h2>
+            <form id="addItemForm">
+                <label for="nome">Nome do Item:</label>
+                <input type="text" id="nome" placeholder="Nome do medicamento/material" required>
+                
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" placeholder="Quantidade" required>
+                
+                <label for="validade">Data de Validade:</label>
+                <input type="date" id="validade" required>
+                
+                <button type="submit">Adicionar ao Estoque</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Itens em Estoque</h2>
+            <div id="estoqueTableWrapper">
+                <table id="estoqueTable">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Quantidade</th>
+                            <th>Validade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Itens do estoque serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="estoque.js"></script>
+
+</body>
+</html>
