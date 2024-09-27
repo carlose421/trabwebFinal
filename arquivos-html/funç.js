@@ -1,22 +1,18 @@
 document.getElementById('addItemForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Captura os valores do formulário
     const nome = document.getElementById('nome').value;
     const quantidade = document.getElementById('quantidade').value;
     const validade = document.getElementById('validade').value;
 
-    // Verifica se todos os campos estão preenchidos
     if (nome === '' || quantidade === '' || validade === '') {
         alert('Preencha todos os campos!');
         return;
     }
 
-    // Adiciona o item à tabela de estoque
     const tableBody = document.querySelector('#estoqueTable tbody');
     const newRow = document.createElement('tr');
 
-    // Criando células da tabela
     const nameCell = document.createElement('td');
     nameCell.textContent = nome;
 
@@ -32,7 +28,6 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
 
     tableBody.appendChild(newRow);
 
-    // Verifica a validade dos itens
     const today = new Date();
     const itemValidityDate = new Date(validade);
     const diffTime = itemValidityDate - today;
